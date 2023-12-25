@@ -4,8 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        body {
+            background-color: #195e11;
+
+    
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">   
+</head>
+</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>hello</p>
+<div class="logo-container">
+<img src="/foto's/jpg/logo.png" class="logo">
+</div>
+
+<div class="images-container">
+<img src="./foto's/jpg/ABVKamer.jpg" alt="" id="foto-1" class="fotos">
+<img src="./foto's/jpg/CesarTee1 kopiëren.jpg" alt="" id="foto-2" class="fotos">
+<img src="./foto's/jpg/af met schaduw.JPG" alt="" id="foto-3" class="fotos">
+<img src="./foto's/jpg/Blikjes.png" alt="" id="foto-4" class="fotos">
+<img src="./foto's/jpg/DSC_7580 kopiëren.jpg" alt="" id="foto-5" class="fotos">
+        <img src="./foto's/jpg/DSC_7720 kopiëren.jpg" alt="" id="foto-6" class="fotos">
+        <img src="./foto's/jpg/Foto_1.jpg" alt="" id="foto-7" class="fotos">
+        <img src="./foto's/jpg/hand.png" alt="" id="foto-8" class="fotos">
+        <img src="./foto's/jpg/NEUSHOORNS opSchool.jpg" alt="" id="foto-9" class="fotos">
+        <img src="./foto's/jpg/Sprint a pitch.png" alt="" id="foto-11" class="fotos">
+        <img src="./foto's/jpg/SiesVissers_A_OPDR02-1.jpg" alt="" id="foto-12" class="fotos">
+        <img src="./foto's/jpg/Sies_Vissers_OPDR052.jpg" alt="" id="foto-13" class="fotos">
+        <img src="./foto's/jpg/STIKSTOF-(1).gif" alt="" id="foto-14" class="fotos">
+        <img src="./foto's/jpg/SiesVissers_A_OPDR0212_Raster.jpg" alt="" id="foto-15" class="fotos">
+        <img src="./foto's/jpg/SiesVissers_A_OPDR0214_Raster.jpg" alt="" id="foto-16" class="fotos">
+        <img src="./foto's/jpg/SiesVissers_A_OPDR04_Outersleeve Recto.jpg" alt="" id="foto-17" class="fotos">
+        <img src="./foto's/jpg/Tunnelgravers.jpg" alt="" id="foto-18" class="fotos">
+        <img src="./foto's/jpg/SiesVissers_A_OPDR0231_Botanisch.jpg" alt="" id="foto-19" class="fotos">
+        <img src="./foto's/jpg/SiesVissers_A_OPDR0235_Botanisch_.jpg" alt="" id="foto-20" class="fotos">
+        <img src="./foto's/jpg/SiesVissers_A_OPDR81_GuldenSnede.jpg" alt="" id="foto-21" class="fotos">
+        <img src="./foto's/jpg/SiesVissers_TYPOLAB_OPDR034.jpg" alt="" id="foto-22" class="fotos">
+        <img src="./foto's/jpg/SiesVissers_TYPOLAB_OPDR039 .jpg" alt="" id="foto-23" class="fotos">
+        <img src="./foto's/jpg/SiesVissers_TYPOLAB_OPDR035.jpg" alt="" id="foto-24" class="fotos">
+</div>
+
+<script>
+// Function to generate a random position
+function getRandomPosition() {
+    var height = window.innerHeight - 200;
+    var width = window.innerWidth - 200;
+
+    var randomX = Math.floor(Math.random() * width);
+    var randomY = Math.floor(Math.random() * height);
+
+    return { x: randomX, y: randomY };
+}
+
+// Function to set random positions for each image
+function setRandomPositions() {
+    var fotos = document.querySelectorAll('.fotos');
+
+    fotos.forEach(function (foto) {
+        var randomPosition = getRandomPosition();
+        foto.style.left = randomPosition.x + 'px';
+        foto.style.top = randomPosition.y + 'px';
+    });
+}
+
+// Call the function when the window loads
+window.onload = setRandomPositions;
+</script>
 </body>
 </html>
